@@ -1,0 +1,92 @@
+[package]
+name = "miow-context"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = []
+web = []
+
+[workspace]
+members = [
+    "crates/miow-core",
+    "crates/miow-parsers",
+    "crates/miow-graph",
+    "crates/miow-agent",
+    "crates/miow-analyzer",
+    "crates/miow-prompt",
+    "crates/miow-llm",
+    "crates/miow-vector",
+    "crates/miow-common",
+    "simple_demo",
+]
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+async-trait = "0.1"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Database
+rusqlite = { version = "0.30", features = ["bundled"] }
+sqlx = { version = "0.7", features = ["sqlite", "runtime-tokio-native-tls"] }
+
+# File system
+walkdir = "2.4"
+ignore = "0.4"
+globset = "0.4"
+
+# Parsing
+tree-sitter = "0.20"
+tree-sitter-typescript = "0.20"
+
+# LLM & AI
+reqwest = { version = "0.11", features = ["json"] }
+futures = "0.3"
+
+# CLI
+clap = { version = "4.4", features = ["derive"] }
+colored = "2.1"
+
+# Web server
+axum = "0.7"
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[dependencies]
+tokio = { workspace = true }
+anyhow = { workspace = true }
+clap = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+serde_json = { workspace = true }
+colored = { workspace = true }
+
+# Workspace crates
+miow-core = { path = "crates/miow-core" }
+miow-parsers = { path = "crates/miow-parsers" }
+miow-graph = { path = "crates/miow-graph" }
+miow-analyzer = { path = "crates/miow-analyzer" }
+miow-prompt = { path = "crates/miow-prompt" }
+miow-llm = { path = "crates/miow-llm" }
+miow-vector = { path = "crates/miow-vector" }
+miow-agent = { path = "crates/miow-agent" }
+
+axum = { workspace = true }
+tower-http = { workspace = true }
+serde = { workspace = true }
+reqwest = { workspace = true }
+futures = { workspace = true }
+
+rand = "0.8"

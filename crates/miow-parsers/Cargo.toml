@@ -1,0 +1,16 @@
+[package]
+name = "miow-parsers"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tree-sitter = { workspace = true }
+tree-sitter-typescript = { workspace = true }
+tree-sitter-rust = "0.20"
+tree-sitter-python = "0.20"
+tracing = { workspace = true }
+miow-llm = { path = "../miow-llm" }

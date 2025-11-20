@@ -1,0 +1,97 @@
+# Rust
+/target/
+**/*.rs.bk
+*.pdb
+Cargo.lock  # Keep for binaries, but can be regenerated
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+.miow/
+**/.miow/
+
+# Web/Node.js
+web/node_modules/
+web/dist/
+web/build/
+web/.vite/
+web/.env
+web/.env.local
+web/.env.*.local
+web/package-lock.json  # Can be regenerated
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment variables
+# .env
+# .env.local
+# .env.*.local
+# .env.production
+# .env.development
+
+# Test and temporary files
+test.db
+test_*.rs
+codebase_analysis*
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Coverage reports
+coverage/
+*.lcov
+.nyc_output/
+
+# Build artifacts
+index-report.json
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Qdrant data (if running locally)
+qdrant_storage/
+
+# Cache directories
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vuepress/dist/
+
+# Misc
+*.orig
+*.rej
+*.pyc
+__pycache__/
+.pytest_cache/
