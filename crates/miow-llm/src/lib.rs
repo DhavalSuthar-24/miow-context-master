@@ -204,4 +204,8 @@ pub struct ContextItem {
     pub content: String,
     pub file_path: String,
     pub relevance_score: f32,
+    #[serde(default)]
+    pub props: Vec<String>,
+    #[serde(default)]
+    pub references: Vec<String>,
 }
